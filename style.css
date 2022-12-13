@@ -1,0 +1,245 @@
+:root {
+    --clr-background: #1F2937;
+    
+    --fs-main: 48px;
+    --fw-main: 900;
+    --fc-main: #F9FAF8;
+
+    --fs-secondary: 18px;
+    --fc-secondary: #E5E7EB;
+
+    --fs-logo: 24px;
+    --fc-logo: #F9FAF8;
+
+    --button-clr: #3382f6;
+
+    --cta-backgrd: #3382f6;
+
+    --fs-article: 36px;
+    --fw-article: 900;
+    --fc-article: #1f2937;
+
+    --clr-bckgrd-quote: #e5e7eb;
+    --fc-quote: #1f2937;
+    --fs-quote: 36px;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    background: var(--clr-background);
+}
+
+.logo {
+    color: var(--fc-logo);
+    font-size: var(--fs-logo);
+    align-items: center;
+    font-weight: var(--fw-main);
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: var(--fc-secondary);
+}
+
+.nav-bar ul li {
+    font-size: var(--fs-secondary);
+}
+
+.heading-container {
+    display: flex;
+    color: var(--fc-main);
+    background: var(--clr-background);
+    padding: 5rem;
+    justify-content: center;
+}
+
+.heading-content {
+    margin-right: 1rem;
+    width: 50%;
+}
+
+.heading {
+    font-size: var(--fs-main);
+    font-weight: var(--fw-main);
+    line-height: .9;
+    margin-bottom: 8px;
+}
+
+.heading-des {
+    font-size: var(--fs-secondary);
+    color: var(--fc-secondary);
+}
+
+button {
+    background: var(--button-clr);
+    border: none;
+    padding: 5px 32px;
+    color: var(--fc-logo);
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.heading-img {
+    width: 50%;
+    background: var(--clr-bckgrd-quote);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.img {
+    color: black;
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+.article-heading {
+    font-weight: var(--fw-article);
+    color: var(--fc-article);
+    font-size: 36px;
+    margin-bottom: 2rem;
+}
+
+.article-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 5rem;
+    text-align: center;
+    gap: 8px;
+    margin-bottom: 2rem;
+}
+
+.card {
+    width: 100px;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    border: 3px solid var(--button-clr);
+    border-radius: 10px;
+    margin: auto;
+}
+
+.quote-section {
+    background: var(--fc-secondary);
+    font-size: var(--fs-quote);
+    font-weight: 400;
+    font-style: italic;
+    padding: 5rem 8rem;
+    color: var(--fc-quote);
+}
+
+.thor {
+    font-style: normal;
+    float: right;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.cta {
+    display: flex;
+    background: var(--cta-backgrd);
+    margin: 4rem 5rem;
+    padding: 2rem 6rem;
+    border-radius: 15px;
+    justify-content: space-between;
+}
+
+.cta-heading {
+    color: var(--fc-logo);
+    font-size: 24px;
+}
+
+.cta-content {
+    color: var(--fc-secondary);
+}
+
+.cta > button {
+    border: 2px solid ;
+}
+
+footer {
+    background: var(--clr-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fc-logo);
+    padding: 2rem;
+}
